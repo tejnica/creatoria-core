@@ -1,8 +1,8 @@
 
 import sys
 import numpy as np
-from .robust_qubo import generate_robust_qubo
-from .pareto_solver import fast_non_dominated_sort
+from creatoria_core.robust_qubo import generate_robust_qubo
+from creatoria_core.pareto_solver import fast_non_dominated_sort
 
 def main():
     print("Creatoria CLI запущен")
