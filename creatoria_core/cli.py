@@ -23,3 +23,5 @@ def main():
         print("Pareto фронты:")
         for i, front in enumerate(fronts):
             print(f"Фронт {i+1}: {front}")
+if __name__ == "__main__":
+    main()
