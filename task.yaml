@@ -1,0 +1,4 @@
+task:
+  name: Test QUBO
+  parameters:
+    vector: [1.0, 2.5, 0.7]
