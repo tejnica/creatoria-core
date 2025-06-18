@@ -1,14 +1,10 @@
-import yaml
 import numpy as np
 from creatoria_core.robust_qubo import generate_robust_qubo
 
-# Загрузка параметров из YAML
-with open("task.yaml", "r") as f:
-    data = yaml.safe_load(f)
+def test_qubo():
+    params = np.array([1.0, 2.0, 3.0])
+    Q = generate_robust_qubo(params, tolerance=0.2, scenarios=100)
+    print("✅ QUBO matrix generated:\n", Q)  # 👈 ЭТО и добавляет вывод
 
-# Пример: task.parameters.vector = [1.0, 2.5, 0.7]
-params = data["task"]["parameters"]["vector"]
-Q = generate_robust_qubo(np.array(params), tolerance=0.1, scenarios=100)
-
-print("✅ Матрица Q:")
-print(Q)
+if __name__ == "__main__":
+    test_qubo()
